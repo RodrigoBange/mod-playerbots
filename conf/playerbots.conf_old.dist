@@ -1403,11 +1403,11 @@ AiPlayerbot.CommandPrefix = ""
 AiPlayerbot.CommandSeparator = "\\\\"
 
 # Enable playerbot talk (say / yell / general chatting / lfg)
-AiPlayerbot.RandomBotTalk = 1
+AiPlayerbot.RandomBotTalk = 0
 # Enable playerbot emote
 AiPlayerbot.RandomBotEmote = 0
 # Enable dungeon suggestions for random bots
-AiPlayerbot.RandomBotSuggestDungeons = 1
+AiPlayerbot.RandomBotSuggestDungeons = 0
 # Bots greet to the players
 AiPlayerbot.EnableGreet = 0
 # Chance to reply to toxic links with toxic links (0-100)
@@ -1556,7 +1556,7 @@ AiPlayerbot.RandombotsWalkingRPG.InDoors = 0
 # This value is only applied to inactive areas where no real-players are detected, when
 # real-players are nearby, friend, group, guild, bg, instances etc the value is always
 # enforced to 100%
-AiPlayerbot.BotActiveAlone = 100
+AiPlayerbot.BotActiveAlone = 0
 
 # Force botActiveAlone when bot is ... of real player
 AiPlayerbot.BotActiveAloneForceWhenInRadius = 150
@@ -1575,7 +1575,7 @@ AiPlayerbot.BotActiveAloneForceWhenInGuild = 1
 #   MinLevel - only apply scaling when level is above or equal to min(bot)Level
 #   MaxLevel - only apply scaling when level is lower or equal of max(bot)Level
 #
-AiPlayerbot.botActiveAloneSmartScale = 1
+AiPlayerbot.botActiveAloneSmartScale = 0
 AiPlayerbot.botActiveAloneSmartScaleDiffLimitfloor = 50
 AiPlayerbot.botActiveAloneSmartScaleDiffLimitCeiling = 200
 AiPlayerbot.botActiveAloneSmartScaleWhenMinLevel = 1

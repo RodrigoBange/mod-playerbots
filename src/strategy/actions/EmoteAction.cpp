@@ -144,8 +144,8 @@ void EmoteActionBase::InitEmotes()
 
 bool EmoteActionBase::Emote(Unit* target, uint32 type, bool textEmote)
 {
-    // 5% chance to emote
-    if (urand(0, 99) >= 1) // 95% of the time, skip the emote
+    // 10% chance to emote
+    if (urand(0, 99) >= 10) // 99% of the time, skip the emote
         return false;
 
     if (target && !bot->HasInArc(static_cast<float>(M_PI), target, sPlayerbotAIConfig->sightDistance))
@@ -209,6 +209,10 @@ bool EmoteActionBase::ReceiveEmote(Player* source, uint32 emote, bool verbal)
     uint32 textEmote = 0;
     std::string emoteText;
     std::string emoteYell;
+
+    // 10% chance to reply to emote
+    if (urand(0, 99) >= 10) // 90% of the time, skip the emote
+        return false;
 
     switch (emote)
     {

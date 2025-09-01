@@ -646,7 +646,7 @@ AiPlayerbot.HunterWolfPet = 0
 # is enabled. Regardless, this value is only applied to inactive areas where no real-players
 # are detected. When real-players are nearby, friend, group, guild, BGs, instances etc,
 # the value is always enforced to 100%
-AiPlayerbot.BotActiveAlone = 100
+AiPlayerbot.BotActiveAlone = 0
 
 # Force botActiveAlone when bot is ... of real player
 AiPlayerbot.BotActiveAloneForceWhenInRadius = 150
@@ -665,7 +665,7 @@ AiPlayerbot.BotActiveAloneForceWhenInGuild = 1
 #   MinLevel - only apply scaling when level is above or equal to min(bot)Level
 #   MaxLevel - only apply scaling when level is lower or equal of max(bot)Level
 #
-AiPlayerbot.botActiveAloneSmartScale = 1
+AiPlayerbot.botActiveAloneSmartScale = 0
 AiPlayerbot.botActiveAloneSmartScaleDiffLimitfloor = 50
 AiPlayerbot.botActiveAloneSmartScaleDiffLimitCeiling = 200
 AiPlayerbot.botActiveAloneSmartScaleWhenMinLevel = 1
@@ -1436,7 +1436,7 @@ AiPlayerbot.RandomClassSpecIndex.11.3 = 3
 #                                                                           Unix/Linux)
 #        Default:     "127.0.0.1;3306;acore;acore;acore_playerbots"       - (PlayerbotDatabaseInfo)
 
-PlayerbotsDatabaseInfo = "127.0.0.1;3306;acore;acore;acore_playerbots"
+PlayerbotsDatabaseInfo = "127.0.0.1;3306;acore;Acore!123;acore_playerbots"
 
 #
 #    PlayerbotsDatabase.WorkerThreads
@@ -1508,9 +1508,9 @@ AiPlayerbot.RandomBotTalk = 1
 # Enable playerbot emote
 AiPlayerbot.RandomBotEmote = 1
 # Enable dungeon suggestions for random bots
-AiPlayerbot.RandomBotSuggestDungeons = 1
+AiPlayerbot.RandomBotSuggestDungeons = 0
 # Bots greet to the players
-AiPlayerbot.EnableGreet = 1
+AiPlayerbot.EnableGreet = 0
 # Chance to reply to toxic links with toxic links (0-100)
 AiPlayerbot.ToxicLinksRepliesChance = 30
 # Chance to reply to thunderfury with thunderfury (0-100)
@@ -1651,7 +1651,7 @@ AiPlayerbot.RandombotsWalkingRPG.InDoors = 1
 # This value is only applied to inactive areas where no real-players are detected, when
 # real-players are nearby, friend, group, guild, bg, instances etc the value is always
 # enforced to 100%
-AiPlayerbot.BotActiveAlone = 60
+AiPlayerbot.BotActiveAlone = 5
 
 # Force botActiveAlone when bot is ... of real player
 AiPlayerbot.BotActiveAloneForceWhenInRadius = 150

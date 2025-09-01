@@ -196,23 +196,35 @@ public:
         sRandomPlayerbotMgr->HandleCommand(type, msg, player);
     }
 
-    bool OnPlayerBeforeCriteriaProgress(Player* player, AchievementCriteriaEntry const* /*criteria*/) override
+    // Commented out so that bots can get achievements (Besides world's first)
+    // bool OnPlayerBeforeCriteriaProgress(Player* player, AchievementCriteriaEntry const* /*criteria*/) override
+    // {
+    //     if (sRandomPlayerbotMgr->IsRandomBot(player))
+    //     {
+    //         return false;
+    //     }
+    //     return true;
+    // }
+
+    // bool OnPlayerBeforeAchievementComplete(Player* player, AchievementEntry const* /*achievement*/) override
+    // {
+    //     if (sRandomPlayerbotMgr->IsRandomBot(player))
+    //     {
+    //         return false;
+    //     }
+    //     return true;
+    // }
+
+    bool OnPlayerBeforeAchievementComplete(Player* player, AchievementEntry const* achievement) override
     {
-        if (sRandomPlayerbotMgr->IsRandomBot(player))
+        if (sRandomPlayerbotMgr->IsRandomBot(player) && (achievement->flags == 256 || achievement->flags == 768))
         {
             return false;
         }
+
         return true;
     }
 
-    bool OnPlayerBeforeAchievementComplete(Player* player, AchievementEntry const* /*achievement*/) override
-    {
-        if (sRandomPlayerbotMgr->IsRandomBot(player))
-        {
-            return false;
-        }
-        return true;
-    }
 
     void OnPlayerGiveXP(Player* player, uint32& amount, Unit* /*victim*/, uint8 /*xpSource*/) override
     {
